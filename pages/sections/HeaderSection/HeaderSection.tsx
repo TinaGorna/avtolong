@@ -24,10 +24,9 @@ export const HeaderSection: React.FC = () => {
                 </Link>
             </div>
 
-                 <span className={styles.title}>
+            <span className={styles.title}>
                     Автолонг.ру
                 </span>
-
 
 
             <div className={styles.info}>

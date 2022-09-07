@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 20px;
+
+  position: absolute;
+  width: 1036px;
+  height: 784px;
+  left: 202px;
+  top: 60px;
+
+  .description {
+    width: 420px;
+    height: 144px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 36px;
+    color: #1B1F20;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 32px;
+    gap: 40px;
+    width: 596px;
+    height: 144px;
+    background: #F5F9FA;
+    border-radius: 12px;
+  }
+}
