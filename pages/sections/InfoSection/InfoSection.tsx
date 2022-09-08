@@ -26,9 +26,9 @@ export const InfoSection: React.FC = () => {
                 </div>
 
                 <Button variant="contained" className={styles.button}>Присоединиться</Button>
-<div className={styles.container}>
-    <Image src={Container}  alt={"Container"}/>
-</div>
+                <div className={styles.container}>
+                    <Image src={Container} alt={"Container"}/>
+                </div>
 
             </div>
         </Paper>

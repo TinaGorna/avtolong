@@ -3,8 +3,6 @@ import clsx from "clsx";
 import {InfoSection} from "../pages/sections/InfoSection/InfoSection";
 import {MagazineStore} from "../pages/sections/Store/MagazineStore";
 
-// import {LeftSideMenu} from "../components/LeftSideMenu";
-
 
 interface MainLayoutProps {
     contentFullWidth?: boolean
@@ -28,6 +26,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
             <div className="rightSide">
                 <MagazineStore/>
             </div>
+
         </div>
     )
 }
