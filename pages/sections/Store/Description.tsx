@@ -1,5 +1,5 @@
 import styles from "./MagazineStore.module.scss";
-import React, {ChangeEvent} from "react";
+import React from "react";
 
 
 type  DescriptionType = {
@@ -38,45 +38,62 @@ const objects: DescriptionType[] = [
 
 export function Description() {
 
-    const [chooseOption, setChosenOption] = React.useState("")
 
-    const handleOption = (event: ChangeEvent<HTMLSelectElement>) => {
-        setChosenOption(event.currentTarget.value)
-        setChosenOption("")
-    }
+    // function X() {
+    //     let color: string
+    //
+    //     let constant = objects[5]
+    //      color = constant ? "#EB5E28" : "#144d5c"
+    //
+    //     return color
+    // }
+    //
+    // let value = X()
 
-    //const setColor = !isChosen ? "#EB5E28" : "#144d5c"
-    //const value = chosenOption ? "#EB5E28" : "#F5F9FA"
+    // function X (arr: [], id: number) {
+    //
+    //         return arr.filter(function(item, i, arr) {
+    //             return (item.id == id);
+    //         });
+    //
+    //     let omsk = X(objects, 4);
+    //
+    //     console.log(omsk);
+    // }
 
-
-    console.log("chosenOption", chooseOption)
 
     return (
-        <div className={styles.cards}>
 
+        <div className={styles.cards}
+            // style={{background: value}}
+
+        >
             {objects.map(i => {
-                return <div
-                    key={i.id}
-                   // onClick={() => setChosenOption(chooseOption)}
-                    onChange={() => handleOption}
-
-                >
-                    <div className={styles.card}>
-                        <div
-                            className={styles.titleWrapper}
-
-                        >
-                            <div className={styles.firstTitle}>{i.title}</div>
-                            <div className={styles.secondTitle}>{i.option}</div>
+                if (!(i.id === 5)) {
+                    return <div key={i.id}>
+                        <div className={styles.card}
+                             style={{background: "#144d5c"}}>
+                            <div className={styles.titleWrapper}>
+                                <div className={styles.firstTitle}>{i.title}</div>
+                                <div className={styles.secondTitle}>{i.option}</div>
+                            </div>
                         </div>
-
                     </div>
-                </div>
+                } else {
+                    return <div key={i.id}>
+                        <div className={styles.card}
+                             style={{background: "#EB5E28"} }>
+                             <div className={styles.titleWrapper }>
+                                 <div className={styles.firstTitle}>{i.title}</div>
+                                 <div className={styles.secondTitle}>{i.option}</div>
+                                 </div>
+
+                                 </div>
+                                 </div>
+                }
+
             })}
-
         </div>
-
-
     )
 }
 
