@@ -38,41 +38,15 @@ const objects: DescriptionType[] = [
 
 export function Description() {
 
-
-    // function X() {
-    //     let color: string
-    //
-    //     let constant = objects[5]
-    //      color = constant ? "#EB5E28" : "#144d5c"
-    //
-    //     return color
-    // }
-    //
-    // let value = X()
-
-    // function X (arr: [], id: number) {
-    //
-    //         return arr.filter(function(item, i, arr) {
-    //             return (item.id == id);
-    //         });
-    //
-    //     let omsk = X(objects, 4);
-    //
-    //     console.log(omsk);
-    // }
-
-
     return (
-
-        <div className={styles.cards}
-            // style={{background: value}}
-
-        >
+        <div className={styles.cards}>
             {objects.map(i => {
                 if (!(i.id === 5)) {
                     return <div key={i.id}>
                         <div className={styles.card}
-                             style={{background: "#144d5c"}}>
+                             style={{
+                                 background: "#F5F9FA",
+                             }}>
                             <div className={styles.titleWrapper}>
                                 <div className={styles.firstTitle}>{i.title}</div>
                                 <div className={styles.secondTitle}>{i.option}</div>
@@ -82,14 +56,17 @@ export function Description() {
                 } else {
                     return <div key={i.id}>
                         <div className={styles.card}
-                             style={{background: "#EB5E28"} }>
-                             <div className={styles.titleWrapper }>
-                                 <div className={styles.firstTitle}>{i.title}</div>
-                                 <div className={styles.secondTitle}>{i.option}</div>
-                                 </div>
+                             style={{
+                                 background: "#EB5E28",
+                                 color: "#FFFFFF"
+                             }}>
+                            <div className={styles.titleWrapper}>
+                                <div className={styles.firstTitle}>{i.title}</div>
+                                <div className={styles.secondTitle} style={{color: "#FFFFFF"}}>{i.option}</div>
+                            </div>
 
-                                 </div>
-                                 </div>
+                        </div>
+                    </div>
                 }
 
             })}
