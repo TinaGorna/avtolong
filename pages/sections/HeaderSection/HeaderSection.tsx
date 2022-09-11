@@ -9,7 +9,7 @@ import Select, {SelectChangeEvent} from "@mui/material/Select";
 
 export const HeaderSection: React.FC = () => {
 
-    const [language, setLanguage] = React.useState("");
+    const [language, setLanguage] = React.useState("RU");
 
     const handleChange = (event: SelectChangeEvent) => {
         setLanguage(event.target.value);
@@ -31,14 +31,13 @@ export const HeaderSection: React.FC = () => {
 
             <div className={styles.info}>
                 <FormControl sx={{m: 1, minWidth: 80}} size="small">
-                    <InputLabel id="demo-simple-select-autowidth-label"></InputLabel>
+                    <InputLabel id="demo-simple-select-autowidth-label"/>
                     <Select
                         labelId="demo-select-small"
                         id="demo-select-small"
                         value={language}
                         label="Language"
                         onChange={handleChange}
-                        defaultValue={"RU"}
                     >
                         <MenuItem value="RU">
                         </MenuItem>
@@ -51,7 +50,6 @@ export const HeaderSection: React.FC = () => {
                 <div className={styles.phone}>
                     <div className={styles.number}>8 (800) 551-74-73</div>
                     <div className={styles.schedule}>По будням с 9:00 до 17:00</div>
-
                 </div>
             </div>
 

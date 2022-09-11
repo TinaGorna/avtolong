@@ -62,7 +62,7 @@ export function Description() {
                             <div className={styles.titleWrapper}>
                                 <div className={styles.firstTitle}>{i.title}</div>
                                 <div className={styles.secondTitle}>{i.option}</div>
-                              <img src={i.image?.src} alt={"Item"} className={styles.image}/>
+                                <img src={i.image?.src} alt={"Item"} className={styles.image}/>
                             </div>
 
                         </div>
