@@ -1,38 +1,48 @@
 import styles from "./MagazineStore.module.scss";
 import React from "react";
+import Wrapper from "../../../components/images/Wrapper.png"
+import Track from "../../../components/images/Track.png"
+import Check from "../../../components/images/Check.png"
+import {StaticImageData} from "next/image";
 
 
 type  DescriptionType = {
     id?: number
     title?: string
     option?: string
+    image?: StaticImageData
 }
 
 const objects: DescriptionType[] = [
     {
         id: 1,
         title: "Оповестим вас о новом заказе",
-        option: "Вы соберёте и упакуете товары. А после упаковки подтвердите отправку грузоперевозчику"
+        option: "Вы соберёте и упакуете товары. А после упаковки подтвердите отправку грузоперевозчику",
+        image: Wrapper
     },
     {
         id: 2,
         title: "Свяжемся с грузоперевозчиком",
-        option: "Оповестим перевозчика об отправке вашего заказа, он подготовит ресурсы для отправки дальше"
+        option: "Оповестим перевозчика об отправке вашего заказа, он подготовит ресурсы для отправки дальше",
+        image: Track
     },
     {
         id: 3,
         title: "Заказ привязан к контейнеру",
-        option: "После получения заказа, перевозчик закрепит его за контейнером и сообщит номер нам"
+        option: "После получения заказа, перевозчик закрепит его за контейнером и сообщит номер нам",
+        image: Check
     },
     {
         id: 4,
         title: "Проследим за движением заказа",
-        option: "Заказ в пути. Мы будем следить, чтобы ваши товары успешно прошли таможню"
+        option: "Заказ в пути. Мы будем следить, чтобы ваши товары успешно прошли таможню",
+        image: Check
     },
     {
         id: 5,
         title: "Заказ на складе и готов к продаже",
-        option: "Проверим, чтобы товары соответствовали заказу и подготовим их для продажи нашим клиентам"
+        option: "Проверим, чтобы товары соответствовали заказу и подготовим их для продажи нашим клиентам",
+        image: Track
     }
 ]
 
@@ -50,7 +60,9 @@ export function Description() {
                             <div className={styles.titleWrapper}>
                                 <div className={styles.firstTitle}>{i.title}</div>
                                 <div className={styles.secondTitle}>{i.option}</div>
+                                <img src={i.image?.src} alt={"Item"}/>
                             </div>
+
                         </div>
                     </div>
                 } else {
