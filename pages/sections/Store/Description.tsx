@@ -3,6 +3,8 @@ import React from "react";
 import Wrapper from "../../../components/images/Wrapper.png"
 import Track from "../../../components/images/Track.png"
 import Check from "../../../components/images/Check.png"
+import Boxes from "../../../components/images/Boxes.png"
+import Last from "../../../components/images/Last.png"
 import {StaticImageData} from "next/image";
 
 
@@ -30,7 +32,7 @@ const objects: DescriptionType[] = [
         id: 3,
         title: "Заказ привязан к контейнеру",
         option: "После получения заказа, перевозчик закрепит его за контейнером и сообщит номер нам",
-        image: Check
+        image: Boxes
     },
     {
         id: 4,
@@ -42,7 +44,7 @@ const objects: DescriptionType[] = [
         id: 5,
         title: "Заказ на складе и готов к продаже",
         option: "Проверим, чтобы товары соответствовали заказу и подготовим их для продажи нашим клиентам",
-        image: Track
+        image: Last
     }
 ]
 
@@ -60,7 +62,7 @@ export function Description() {
                             <div className={styles.titleWrapper}>
                                 <div className={styles.firstTitle}>{i.title}</div>
                                 <div className={styles.secondTitle}>{i.option}</div>
-                                <img src={i.image?.src} alt={"Item"}/>
+                              <img src={i.image?.src} alt={"Item"} className={styles.image}/>
                             </div>
 
                         </div>
@@ -75,6 +77,7 @@ export function Description() {
                             <div className={styles.titleWrapper}>
                                 <div className={styles.firstTitle}>{i.title}</div>
                                 <div className={styles.secondTitle} style={{color: "#FFFFFF"}}>{i.option}</div>
+                                <img src={i.image?.src} alt={"Item"} className={styles.image}/>
                             </div>
 
                         </div>

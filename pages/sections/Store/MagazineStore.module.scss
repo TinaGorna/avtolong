@@ -71,7 +71,13 @@
         }
       }
 
-
+      .image {
+        display: flex;
+        position: absolute;
+        width: 84px;
+        height: 80px;
+        right: 30px;
+      }
     }
   }
 }
