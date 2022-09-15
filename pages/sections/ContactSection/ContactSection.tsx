@@ -69,7 +69,6 @@ export const ContactSection: React.FC = () => {
                     </div>
 
                     <img src={AvtolongContainer.src} alt={"Container"} className={styles.imgContainer}/>
-
                 </div>
             </div>
         </div>
